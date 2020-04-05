@@ -1,4 +1,26 @@
 .header
+    shadowBorder(color1_bg)
+
+    margin-bottom: 0 !important
+    background: var(--primary)
+
+    @media media-max-lg
+        padding: 10px 0
+
+    @media media-min-lg
+        position: relative
+        z-index: 20
+        justify-content: space-between
+        padding: 40px 0
+        transition: all .2s ease
+
+        .scrolling &
+            padding: 10px 0
+
     &-container
         position: sticky
         top: 0
+
+        @media media-max-lg
+            .up &
+                transform: translateY(-115px)

@@ -1,2 +1,28 @@
 .cms-home .header-container + .banner
-    margin: 0
+    @media media-min-lg
+        margin-top: 50px
+
+    @media media-max-lg
+        margin-top: -16px
+
+.banner
+    img
+        min-width: 100%
+        object-fit: cover
+
+#banner__banner-vitrine-01
+    .banner
+        &__item
+            padding: 15px
+
+        &__wrapper
+            margin: -15px
+            width: auto !important
+
+#banner__regua-de-vantagens
+    border-bottom: solid 1px #ededee
+
+    .banner__wrapper
+        container()
+
+        width: viewport !important

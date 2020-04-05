@@ -1,2 +1,84 @@
 .search
-    display: none
+    .header &
+        z-index: 30
+
+        &.on
+            .search__input
+                @media media-max-sm
+                    height: 75px
+
+        &__hide
+            display: flex
+            align-items: center
+            height: 70px
+
+    @media media-max-sm
+        &__button
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            width: 55px
+            height: 55px
+            border: solid 2px var(--primary-hover)
+            border-radius: 50%
+            background: #fff
+
+            .ico
+                width: 25px
+                height: 25px
+                fill: var(--secundary)
+
+    @media media-min-sm
+        border: solid 2px var(--primary-hover)
+        border-radius: 56px
+        background: #fff
+
+        .header &
+            flex: 0 1 600px
+            min-width: 0
+
+        input&__input
+            height: 56px
+            border: 0
+            background: none
+            box-shadow: none
+            line-height: 56px
+
+            &::placeholder
+                color: var(--tertiary)
+                font-weight: regular
+                font-size: 16px
+
+        &__filter
+            border-right: solid 1px var(--primary-hover)
+            border-left: solid 1px var(--primary-hover)
+
+            .label
+                height: 56px
+                border: 0
+                color: var(--tertiary) t
+
+                &:before
+                    display: none
+
+        &__button
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            width: 70px
+            height: 56px
+            background: none
+            box-shadow: none
+
+            .ico
+                width: 33px
+                height: 33px
+                fill: var(--secundary)
+
+            &:hover
+                background: none
+
+                .ico
+                    fill: var(--secundary-hover)

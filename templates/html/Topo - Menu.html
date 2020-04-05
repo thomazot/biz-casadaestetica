@@ -1,0 +1,10 @@
+<div class="head">
+    <div class="head__container">
+        <div class="head__nav">
+            {{block type="menubuilder/output" identifier="header-menu"}}
+        </div>
+        <div class="head__loginout">
+            {{widget type="interface/widget_login" template="interface/widgets/login.phtml" identificador="loginout" login_convidado="Olá faça seu <a href='@url-login'>login</a> ou <a href='@url-cadastro'>cadastre-se</a>" login_cliente="Olá <a href='@url-conta'>@nome-usuario</a>, <a href='@url-logout'>sair</a>."}}
+        </div>
+    </div>
+</div>

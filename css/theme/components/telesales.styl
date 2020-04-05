@@ -1,0 +1,44 @@
+.telesales
+    .header &
+        @media media-max-sm
+            margin-left: 5px
+
+        @media media-min-sm
+            margin-left: 16px
+
+        @media media-min-lg
+            flex: 0 0 175px
+
+    a
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        color: var(--primary-contrast)
+        font-weight: regular
+        font-size: 13px
+
+        strong
+            display: block
+            font-size: 16px
+
+        .ico
+            width: 34px
+            height: 34px
+            color: var(--secundary)
+
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        padding-bottom: 6px
+        width: 55px
+        height: 55px
+        border: solid 2px var(--primary-hover)
+        border-radius: 50%
+        background: var(--primary-contrast)
+
+    &__text
+        margin-left: 8px
+
+        @media media-max-lg
+            display: none

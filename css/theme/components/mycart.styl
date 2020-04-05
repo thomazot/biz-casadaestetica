@@ -1,0 +1,35 @@
+.mycart
+    .header &
+        @media media-max-sm
+            margin-left: 5px
+
+    &__header
+        a
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            color: var(--primary-contrast)
+
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 55px
+        height: 55px
+        border: solid 2px var(--primary-hover)
+        border-radius: 50%
+        background: #fff
+
+        .ico
+            width: 34px
+            height: 34px
+            color: var(--secundary)
+
+    &__text
+        margin-left: 8px
+
+        @media media-max-lg
+            display: none
+
+    &__content
+        display: none !important

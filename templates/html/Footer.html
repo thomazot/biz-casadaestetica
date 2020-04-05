@@ -1,0 +1,76 @@
+<div class="footer__row footer__row--payments-sends">
+    <div class="footer__container">
+        <div class="footer__payment">
+            <h3 class="footer__title">Formas de pagamento</h3>
+            <div class="footer__content">
+                {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="payments" pagtos="all"}}
+            </div>
+        </div>
+        <div class="footer__send">
+            <h3 class="footer__title">Formas de envio</h3>
+            <div class="footer__content">
+                {{widget type="interface/widget_envios" template="interface/widgets/envios.phtml" identificador="sends" envios="2,4,5"}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer__row footer__row--navs">
+    <div class="footer__container">
+        <div class="footer__col">
+            <div class="footer__box">
+                <h3 class="footer__name">Fale conosco</h3>
+                <div class="footer__content">
+                    <div class="footer__phone">
+                        <a href="tel:1138644659">(11) 3864-4659</a>
+                    </div>
+                    <div class="footer__email">
+                        <a href="mailto:contato@casadaestetica.com.br">contato@casadaestetica.com.br</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__name">Horário de atendimento</h3>
+                <div class="footer__content">
+                    <div class="footer__timer">De seg. a sex., das 8h às 18h30 <br /> Sábado das 9h às 13h</div>
+                </div>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__name">Loja física</h3>
+                <div class="footer__content">
+                    <div class="footer__address">
+                        Rua Fábia, 481 - Vila Romana <br />
+                        São Paulo - SP <br />
+                        CEP: 05051-030
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__box">
+                <h3 class="footer__name">Informação</h3>
+                <div class="footer__content">
+                    {{block type="menubuilder/output" identifier="footer-info"}}
+                </div>
+            </div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__box">
+                <h3 class="footer__name">Acesse sua conta</h3>
+                <div class="footer__content">
+                    {{block type="menubuilder/output" identifier="footer-account"}}
+                </div>
+            </div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__box">
+                <h3 class="footer__name">
+                    Redes Sociais
+                </h3>
+                <div class="footer__content">
+                    {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="socials" redes="all"}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

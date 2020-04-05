@@ -1,5 +1,21 @@
-@media (max-width: 992px)
+@media media-max-lg
     .categories
+        &__show
+            order: -1
+
+        &--mobi
+            .all-ul--0
+                display: flex
+                flex-flow: column nowrap
+
+            .all-li--0
+                order: 1
+                width: 100%
+
+                &.ofertas
+                    order: 2
+                    background: var(--secundary)
+
         .parent
             position: relative
 
@@ -11,12 +27,13 @@
 
             > a
                 display: flex
-                min-height: 48px
                 justify-content: flex-start
                 align-items: center
+                min-height: 48px
 
             &:after
                 icon('\f054')
+
                 position: absolute
                 top: 0
                 right: 0
@@ -26,9 +43,10 @@
                 align-items: center
                 width: 48px
                 height: 48px
+                border-left: solid 1px rgba(0, 0, 0, .1)
+                color: var(--primary-contrast)
                 font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
-                transition: all 0.2s ease
+                transition: all .2s ease
 
             &.on
                 &:after
@@ -40,22 +58,44 @@
         .all-li--0
             padding-bottom: 0
 
-@media (min-width: 993px)
+@media media-min-lg
     .categories
-        margin-bottom: 0 !important
-        background: none
+        position: absolute
+        top: 100%
+        left: 0
         flex: 1
+        margin-bottom: 0 !important
         min-width: 0
+        width: 100%
+        background: none
+        background: #fff
+        transition: all .2s ease
+
+        .scrolling:not(.scrolling--up) &
+            transform: translateY(-50px)
 
         .a--0
-            color: var(--primary)
-            white-space: nowrap
-            font-size: 14px
-            font-weight: semibold
+            height: 50px
+            color: var(--tertiary)
             text-transform: uppercase
+            text-transform: uppercase
+            white-space: nowrap
+            font-weight: regular
+            font-size: 14px
+
+            &.ofertas
+                color: var(--secundary)
+                font-weight: bold
 
         .li--0
+            flex: 0 0 auto
             order: 1
 
+            &.ofertas
+                order: 2
+
+        .ul--0
+            justify-content: space-between
+
         &__all
-            order: 2
+            display: none
