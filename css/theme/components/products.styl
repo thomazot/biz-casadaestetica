@@ -4,6 +4,12 @@
     .owl-pagination
         display: none
 
+    .owl-wrapper-outer
+        @media media-min-lg
+            margin: -13px
+            padding: 13px
+            width: auto !important
+
     &
         margin-top: 60px
 
@@ -19,9 +25,21 @@
         span
             color: var(--primary)
 
+    &__main
+        display: flex
+        flex: 1
+        flex-flow: column nowrap
+        min-height: 0
+
     &__case
         justify-content: flex-start
+        padding: 5px
+        border-radius: 4px
         box-shadow: none
+
+        @media media-min-lg
+            &:hover
+                box-shadow: 0 0 5px rgba(0, 0, 0, .1)
 
     &__header
         border: solid 1px var(--products-border-color)
@@ -37,3 +55,20 @@
 
     &__main
         padding: 15px 5px
+
+    &__actions
+        display: flex
+        flex: 1
+        flex-flow: column nowrap
+        min-height: 0
+
+        @media media-min-lg
+            opacity: 0
+            transition: all .2s ease
+
+            .products__case:hover &
+                opacity: 1
+
+        .button
+            margin-top: auto
+            width: 100%
